@@ -31,3 +31,17 @@ Sortida() {
   echo "Gràcies per visitar Where Cars Meet Pasion"
   exit
 }
+
+while true;
+do
+  Opcio-Menu
+  read opcio
+  case $opcio in
+    1) enDesenvolupament;;
+    2) enDesenvolupament;;
+    3) enDesenvolupament;;
+    4) enDesenvolupament;;
+    0) Sortida;;
+    *) opcioNoValida;;
+  esac
+done
