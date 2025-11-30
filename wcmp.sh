@@ -1,5 +1,7 @@
 #!/bin/bash
 
+db="${1:-}"
+
 Opcio-Menu() {
   echo "---------------------------------------------------------"
   echo "Where Cars Meet Passion (Base de Dades)"
@@ -45,9 +47,9 @@ Opcio-1() {
   read opcio1
   clear
   case $opcio1 in
-    1) ./tarea1-1.sh;;
-    2) ./tarea1-2.sh;;
-    3) ./tarea1-3.sh;;
+    1) ./tarea1-1.sh $db;;
+    2) ./tarea1-2.sh $db;;
+    3) ./tarea1-3.sh $db;;
   esac
   clear
 }
@@ -57,7 +59,7 @@ do
   Opcio-Menu
   read opcio
   case $opcio in
-    1) enDesenvolupament;;
+    1) Opcio-1;;
     2) enDesenvolupament;;
     3) enDesenvolupament;;
     4) enDesenvolupament;;
