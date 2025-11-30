@@ -1,5 +1,7 @@
 #!/bin/bash
 
+db="${1:-}"
+
 Opcio-Menu() {
   echo "---------------------------------------------------------"
   echo "Where Cars Meet Passion (Base de Dades)"
@@ -32,12 +34,32 @@ Sortida() {
   exit
 }
 
+Opcio-1() {
+  clear
+  echo "--------------------------------------------------"
+  echo "1 - La nostra selecció de vehicles."
+  echo "--------------------------------------------------"
+  echo "1 Els nostres cotxes ordenats alfabèticament."
+  echo "2 Els nostres cotxes ordenats de menys a més consum (MPG - Miles Per Gallon)."
+  echo "3 Els nostres cotxes ordenats de menys acceleració a més (0 to 100 Miles Per Hour)."
+  echo "0 Tornar al menú anterior."
+  echo "Selecciona una opció:"
+  read opcio1
+  clear
+  case $opcio1 in
+    1) ./tarea1-1.sh $db;;
+    2) ./tarea1-2.sh $db;;
+    3) ./tarea1-3.sh $db;;
+  esac
+  clear
+}
+
 while true;
 do
   Opcio-Menu
   read opcio
   case $opcio in
-    1) enDesenvolupament;;
+    1) Opcio-1;;
     2) enDesenvolupament;;
     3) enDesenvolupament;;
     4) enDesenvolupament;;
