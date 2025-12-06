@@ -54,6 +54,25 @@ Opcio-1() {
   clear
 }
 
+Opcio-2() {
+  clear
+  echo "------------------------------------------"
+  echo "2 - Troba el teu cotxe."
+  echo "------------------------------------------"
+  echo "1 Mostrar les especificacions d’un cotxe."
+  echo "2 Mostrar els cotxes que tenen una acceleració entre un mínim i un màxim."
+  echo "3 Mostrar vehicles per zona d’origen."
+  echo "4 Tornar al menú anterior."
+  read opcio2
+  clear
+  case $opcio2 in
+    1) ./tarea2-1.sh $db;;
+    2) ./tarea2-2.sh $db;;
+    3) ./tarea2-3.sh $db;;
+  esac
+  clear
+}
+
 while true;
 do
   Opcio-Menu
